@@ -7,7 +7,7 @@
     tools:context="com.brogrammers.emergency.RegisterActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/registerView"
         android:layout_width="218dp"
         android:layout_height="46dp"
         android:layout_marginTop="56dp"
@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/usernameVal"
+        android:id="@+id/registerDisplayNameVal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
@@ -30,38 +30,38 @@
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/registerView" />
 
     <EditText
-        android:id="@+id/passwordVal"
+        android:id="@+id/registerPasswordVal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="Password ..."
         android:inputType="textPassword"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/usernameVal" />
+        app:layout_constraintTop_toBottomOf="@+id/registerDisplayNameVal" />
 
     <EditText
         android:id="@+id/repeatPasswordVal"
         android:layout_width="wrap_content"
         android:layout_height="43dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="Repeat Password ..."
         android:inputType="textPassword"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordVal" />
+        app:layout_constraintTop_toBottomOf="@+id/registerPasswordVal" />
 
     <EditText
-        android:id="@+id/emailVal"
+        android:id="@+id/registerEmailVal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="43dp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         android:ems="10"
@@ -72,13 +72,15 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/repeatPasswordVal"
-        app:layout_constraintVertical_bias="0.233" />
+        app:layout_constraintVertical_bias="0.108" />
 
     <Button
         android:id="@+id/registerBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Register Now!"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"

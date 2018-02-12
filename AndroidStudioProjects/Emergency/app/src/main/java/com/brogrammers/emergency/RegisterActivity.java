@@ -2,7 +2,6 @@ package com.brogrammers.emergency;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,13 +20,13 @@ import com.google.firebase.database.FirebaseDatabase;
 public class RegisterActivity extends AppCompatActivity {
 
     //Register tools
-    private EditText mUsernameVal;
-    private EditText mPasswordVal;
-    private EditText mEmailVal;
+    private EditText mRegisterDisplayNameVal;
+    private EditText mRegisterPasswordVal;
+    private EditText mRegisterEmailVal;
     private Button mRegisterBtn;
 
     private FirebaseAuth mAuth;
-    private DatabaseReference mDatabase;
+    private DatabaseReference mDatabaseUsers;
     private ProgressDialog mProgress;
 
     @Override
@@ -36,12 +35,12 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         mAuth = FirebaseAuth.getInstance();
-        mDatabase = FirebaseDatabase.getInstance().getReference().child("Registered Callers");
+        mDatabaseUsers = FirebaseDatabase.getInstance().getReference().child("Registered Callers");
         mProgress = new ProgressDialog(this);
 
-        mUsernameVal = (EditText) findViewById(R.id.usernameVal);
-        mPasswordVal = (EditText) findViewById(R.id.passwordVal);
-        mEmailVal = (EditText) findViewById(R.id.emailVal);
+        mRegisterDisplayNameVal = (EditText) findViewById(R.id.registerDisplayNameVal);
+        mRegisterPasswordVal = (EditText) findViewById(R.id.registerPasswordVal);
+        mRegisterEmailVal = (EditText) findViewById(R.id.registerEmailVal);
         mRegisterBtn = (Button) findViewById(R.id.registerBtn);
 
         mRegisterBtn.setOnClickListener(new View.OnClickListener() {
@@ -53,13 +52,13 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void startRegister() {
-        final String username = mUsernameVal.getText().toString().trim();
-        String password = mPasswordVal.getText().toString().trim();
-        String email = mEmailVal.getText().toString().trim();
+        final String displayName = mRegisterDisplayNameVal.getText().toString().trim();
+        String password = mRegisterPasswordVal.getText().toString().trim();
+        String email = mRegisterEmailVal.getText().toString().trim();
 
         //To check if fields are not empty
-        if(!TextUtils.isEmpty(username) && !TextUtils.isEmpty(password) && !TextUtils.isEmpty(email)) {
-            mProgress.setMessage("Registering ... These could take a while ... ");
+        if(!TextUtils.isEmpty(displayName) && !TextUtils.isEmpty(password) && !TextUtils.isEmpty(email)) {
+            mProgress.setMessage("Signing up ...");
             mProgress.show();
 
             mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -68,8 +67,8 @@ public class RegisterActivity extends AppCompatActivity {
                     if(task.isSuccessful()) {
                         String user_id = mAuth.getCurrentUser().getUid();
 
-                        DatabaseReference registered_caller_db = mDatabase.child(user_id);
-                        registered_caller_db.child("Username").setValue(username);
+                        DatabaseReference registered_caller_db = mDatabaseUsers.child(user_id);
+                        registered_caller_db.child("Display Name").setValue(displayName);
                         registered_caller_db.child("Pofile Picture").setValue("default");
 
                         mProgress.dismiss();

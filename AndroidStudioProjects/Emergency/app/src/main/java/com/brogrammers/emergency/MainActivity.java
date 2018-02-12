@@ -8,20 +8,23 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
 
     //Register tools
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
-    private DatabaseReference mDatabase;
+    private DatabaseReference mDatabaseUsers;
     private Button mLocBtn;
-    private Button mNameBtn;
-    private Button mBothBtn;
+    private Button mProfileBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,36 +36,29 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 if(firebaseAuth.getCurrentUser() == null) {
-                    Intent registerIntent = new Intent(MainActivity.this, RegisterActivity.class);
-                    registerIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(registerIntent);
+                    Intent loginIntent = new Intent(MainActivity.this, LoginActivity.class);
+                    loginIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(loginIntent);
                 }
             }
         };
-        mDatabase = FirebaseDatabase.getInstance().getReference();
+        mDatabaseUsers = FirebaseDatabase.getInstance().getReference().child("Registered Callers");
+        mDatabaseUsers.keepSynced(true);
         mLocBtn = (Button) findViewById(R.id.locBtn);
-        mNameBtn = (Button) findViewById(R.id.nameBtn);
-        mBothBtn = (Button) findViewById(R.id.bothBtn);
+        mProfileBtn = (Button) findViewById(R.id.profileBtn);
 
         mLocBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mDatabase.child("Location").setValue("Apalit, Pampanga");
+                String user_id = mAuth.getCurrentUser().getUid();
+                mDatabaseUsers.child(user_id).child("Location").setValue("Apalit, Pampanga");
             }
         });
 
-        mNameBtn.setOnClickListener(new View.OnClickListener() {
+        mProfileBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mDatabase.child("Name").setValue("Lorenz Florentino 1st");
-            }
-        });
-
-        mBothBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mDatabase.child("Location").setValue("Mandaluyong City");
-                mDatabase.child("Name").setValue("Lorenz Florentino 2nd");
+                startActivity(new Intent(MainActivity.this, ProfileSetupActivity.class));
             }
         });
     }
