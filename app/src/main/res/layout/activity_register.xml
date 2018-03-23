@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context="com.brogrammers.badger.io.Authentication.RegisterActivity">
+
+    <EditText
+        android:id="@+id/nameField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:ems="10"
+        android:hint="Your name ... "
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/loginEmailField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameField"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp"
+        android:ems="10"
+        android:hint="Your email ..."
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/loginPasswordField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginEmailField"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="Your password ..."
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/registerBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginPasswordField"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:text="Register Now" />
+
+    <Button
+        android:id="@+id/loginNowBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Already have an account?" />
+</RelativeLayout>

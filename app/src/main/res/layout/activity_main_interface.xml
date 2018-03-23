@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context="com.brogrammers.badger.io.MainFeatures.MainInterfaceActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/profileSetupBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="180dp"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/profileSetupBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_above="@+id/logoutBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:text="Setup Profile" />
+
+    <Button
+        android:id="@+id/logoutBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="21dp"
+        android:text="Logout" />
+
+    <Button
+        android:id="@+id/checkOnlineUsersBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/profileSetupBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="52dp"
+        android:text="Check Online Users" />
+
+</RelativeLayout>

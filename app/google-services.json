@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1030262313465",
+    "firebase_url": "https://badger-io-2018.firebaseio.com",
+    "project_id": "badger-io-2018",
+    "storage_bucket": "badger-io-2018.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1030262313465:android:8e854bfaa2fff148",
+        "android_client_info": {
+          "package_name": "com.brogrammers.badger.io"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1030262313465-a6qdaaf1t8vfamng63dfclsuu3vnbhq5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.brogrammers.badger.io",
+            "certificate_hash": "8653e4008a510175e6a6f39ac471ec0b4e857bf8"
+          }
+        },
+        {
+          "client_id": "1030262313465-rugvqbe7demdq8bjjtmbb05lspq33otb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrqgGozIEOn1QQZYOWzawyK9bfYXBzH5M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1030262313465-rugvqbe7demdq8bjjtmbb05lspq33otb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
