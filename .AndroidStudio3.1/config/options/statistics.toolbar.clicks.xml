@@ -1,0 +1,14 @@
+<application>
+  <component name="ToolbarClicksCollector">
+    <counts>
+      <entry action="Android.RunAndroidSdkManager@MainToolbar" count="3" />
+      <entry action="HelpTopics@MainToolbar" count="1" />
+      <entry action="MakeGradleProject@MainToolbar" count="1" />
+      <entry action="MaterialTheme.Accents@MainToolbar" count="5" />
+      <entry action="MaterialTheme.Components@MainToolbar" count="2" />
+      <entry action="MaterialTheme.Panels@MainToolbar" count="25" />
+      <entry action="MaterialTheme.ThemeChooser@MainToolbar" count="9" />
+      <entry action="com.intellij.application.options.schemes.AbstractSchemesPanel$ShowSchemesActionsListAction@NavBarToolbar" count="2" />
+    </counts>
+  </component>
+</application>

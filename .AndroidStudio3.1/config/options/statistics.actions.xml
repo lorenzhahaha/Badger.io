@@ -1,0 +1,34 @@
+<application>
+  <component name="ActionsCollector">
+    <counts>
+      <entry action="$Delete" count="2" />
+      <entry action="Android.RunAndroidSdkManager" count="3" />
+      <entry action="CheckinProject" count="1" />
+      <entry action="EditorBackSpace" count="2" />
+      <entry action="HelpTopics" count="1" />
+      <entry action="MTAddFileColors" count="2" />
+      <entry action="MTArcDarkTheme" count="1" />
+      <entry action="MTBiggerTabs" count="2" />
+      <entry action="MTChangeWallpaperAction" count="1" />
+      <entry action="MTCompactSidebarAction" count="5" />
+      <entry action="MTCompactStatusBarAction" count="2" />
+      <entry action="MTContrastAction" count="2" />
+      <entry action="MTDarculaArrows" count="2" />
+      <entry action="MTDarkerTheme" count="2" />
+      <entry action="MTHideFileIconsAction" count="2" />
+      <entry action="MTLighterTheme" count="1" />
+      <entry action="MTMonokaiTheme" count="1" />
+      <entry action="MTPlusMinusArrows" count="1" />
+      <entry action="MTUpperCaseTabsAction" count="3" />
+      <entry action="MakeGradleProject" count="1" />
+      <entry action="MaterialTheme.Accents" count="5" />
+      <entry action="MaterialTheme.Components" count="2" />
+      <entry action="MaterialTheme.Panels" count="25" />
+      <entry action="MaterialTheme.ThemeChooser" count="9" />
+      <entry action="ShowSettings" count="4" />
+      <entry action="com.chrisrm.idea.actions.accents.MTGraphiteAccentAction" count="1" />
+      <entry action="com.chrisrm.idea.actions.accents.MTTomatoAccentAction" count="1" />
+      <entry action="com.chrisrm.idea.actions.accents.MTTurquoiseAccentAction" count="1" />
+    </counts>
+  </component>
+</application>
