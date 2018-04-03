@@ -202,7 +202,12 @@ public class CheckOnlineUsersActivity extends AppCompatActivity implements Googl
 
             @Override
             protected void onBindViewHolder(@NonNull ListOnlineViewHolder holder, int position, @NonNull final Users model) {
-                holder.mEmailText.setText(model.getEmail() + " (you)");
+
+                if (!model.getEmail().equals(FirebaseAuth.getInstance().getCurrentUser().getEmail())) {
+                    holder.mEmailText.setText(model.getEmail());
+                } else {
+                    holder.mEmailText.setText(model.getEmail() + " (you)");
+                }
 
                 //Implement item click of recycler view
                 holder.setItemClickListener(new ItemClickListener() {

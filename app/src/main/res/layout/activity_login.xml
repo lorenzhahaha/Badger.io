@@ -4,63 +4,134 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
     tools:context="com.brogrammers.badger.io.Authentication.LoginActivity">
 
-    <EditText
-        android:id="@+id/loginEmailField"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="50dp"
-        android:ems="10"
-        android:hint="Your email ..."
-        android:inputType="textEmailAddress"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="35dp" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="-70dp">
 
-    <EditText
-        android:id="@+id/loginPasswordField"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/loginEmailField"
-        android:layout_below="@+id/loginEmailField"
-        android:layout_marginTop="38dp"
-        android:ems="10"
-        android:hint="Your password ..."
-        android:inputType="textPassword"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginEmailField" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_gravity="top"
+            android:src="@drawable/login_bg" />
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/loginBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/loginPasswordField"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="77dp"
-        android:text="Login Now"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="175dp" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_margin="30dp"
+        android:padding="30dp">
 
-    <com.google.android.gms.common.SignInButton
-        android:id="@+id/googleBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/registerNowBtn"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="47dp"></com.google.android.gms.common.SignInButton>
+        <EditText
+            android:id="@+id/loginEmailField"
+            android:layout_width="275dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="200dp"
+            android:background="@drawable/edit_text_round"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="30dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="35dp" />
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/registerNowBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_margin="30dp"
+        android:padding="30dp">
+
+        <EditText
+            android:id="@+id/loginPasswordField"
+            android:layout_width="275dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="270dp"
+            android:background="@drawable/edit_text_round"
+            android:ems="10"
+            android:layout_gravity="center"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingLeft="30dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_margin="30dp"
+        android:padding="30dp">
+
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="275dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/googleBtn"
+            android:layout_below="@+id/loginPasswordField"
+            android:layout_marginTop="340dp"
+            android:layout_gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:background="@drawable/button_round"
+            android:text="Login Now"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="11dp"
-        android:text="Need a new account?" />
+        android:paddingLeft="30dp">
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/googleBtn"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:layout_above="@+id/registerNowBtn"
+            android:layout_centerHorizontal="true"
+            android:text="Sign In"
+            android:layout_marginTop="480dp"></com.google.android.gms.common.SignInButton>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:paddingRight="30dp">
+
+        <Button
+            android:layout_gravity="right"
+            android:id="@+id/registerNowBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/loginBtn"
+            android:textColor="@color/colorDark"
+            android:layout_marginTop="480dp"
+            android:background="@android:color/transparent"
+            android:text="Need a new account?"
+            android:textAllCaps="false"
+            android:textSize="14dp" />
+    </LinearLayout>
+
 </RelativeLayout>

@@ -26,6 +26,7 @@ public class MainInterfaceActivity extends AppCompatActivity {
 
     private DatabaseReference onlineRef, currentUserRef, counterRef;
 
+    private DatabaseReference mDatabaseOnline;
     private DatabaseReference mDatabase;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -70,6 +71,9 @@ public class MainInterfaceActivity extends AppCompatActivity {
         mLogoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                currentUserRef = FirebaseDatabase.getInstance().getReference("lastOnline")
+                        .child(mAuth.getCurrentUser().getUid());
+                currentUserRef.removeValue();
                 mAuth.signOut();
                 Intent logoutIntent = new Intent(MainInterfaceActivity.this, LoginActivity.class);
                 startActivity(logoutIntent);

@@ -13,7 +13,8 @@
         android:layout_gravity="center_vertical"
         android:padding="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/whole">
 
         <TextView
             android:id="@+id/emailText"

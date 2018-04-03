@@ -112,8 +112,8 @@ public class SetupAccountActivity extends AppCompatActivity {
             CropImage.activity(imageUri)
                     .setGuidelines(CropImageView.Guidelines.ON)
                     .setAspectRatio(1,1)
-                    .setMinCropResultSize(256, 256)
-                    .setMaxCropResultSize(512, 512)
+                    .setMinCropResultSize(512, 512)
+                    .setMaxCropResultSize(1200, 1200)
                     .start(this);
         }
 

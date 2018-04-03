@@ -15,32 +15,26 @@
 
         <ImageView
             android:id="@+id/appLogo"
-            android:src="@drawable/logo_main"
-            android:layout_gravity="center"
             android:layout_width="100dp"
-            android:layout_height="100dp" />
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo_main" />
     </LinearLayout>
 
     <LinearLayout
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
 
         <pl.droidsonroids.gif.GifImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginTop="400dp"
-            android:src="@drawable/loading"
-            android:background="@android:color/transparent" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Just a moment"
-            android:textSize="11dp"
-            android:textColor="@color/colorDark"
-            android:textAlignment="center"/>
+            android:layout_marginTop="500dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/loading" />
 
     </LinearLayout>
 
